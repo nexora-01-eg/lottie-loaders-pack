@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NEXORA Loaders Pack — 24 Lottie Loaders</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #08080d; color: #fff; font-family: 'Segoe UI', Tahoma, sans-serif; padding: 48px 24px; }
+  header { text-align: center; margin-bottom: 40px; }
+  header h1 { font-size: 2.4rem; font-weight: 900; }
+  header h1 span { background: linear-gradient(110deg, #9a7b1e, #d4af37, #f9ecb8, #d4af37); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  header p { color: #8a8a9a; margin-top: 10px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; max-width: 1200px; margin: 0 auto; }
+  .card { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); border-radius: 18px; padding: 18px; text-align: center; transition: transform .3s, border-color .3s; }
+  .card:hover { transform: translateY(-4px); border-color: rgba(212,175,55,.5); }
+  .stage { height: 130px; display: flex; align-items: center; justify-content: center; background: #000; border-radius: 12px; overflow: hidden; }
+  .name { margin-top: 12px; font-size: .82rem; font-weight: 700; }
+  .meta { font-family: monospace; font-size: .68rem; color: #d4af37; margin-top: 4px; direction: ltr; }
+  footer { text-align: center; color: #8a8a9a; font-size: .75rem; margin-top: 40px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>NEXORA <span>Loaders Pack</span></h1>
+  <p>24 لودر Lottie خفيف للمواقع والتطبيقات — إجمالي ~200KB فقط</p>
+</header>
+<div class="grid" id="grid"></div>
+<footer>NEXORA ARSENAL · Lottie animations render live via lottie-web</footer>
+<div id="cdn-warn" style="display:none;text-align:center;color:#e08080;font-size:.8rem;margin-top:16px;">تعذر تحميل مكتبة lottie-web (تحقق من الإنترنت) — الملفات في مجلد files/ سليمة.</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+<script src="data.js"></script>
+<script>
+  var files = ["loader-01-material","loader-02-disc","loader-03-simple","loader-04-dots-3","loader-05-dots-2","loader-06-sleepy","loader-07-spinner-ring","loader-08-trail","loader-09-progress-2","loader-10-wave-a","loader-11-material-2","loader-12-material-wave","loader-13-material-google","loader-14-dots-google","loader-15-dots-1","loader-16-progress-1","loader-17-gradient-strokes","loader-18-semicircle","loader-19-preloader","loader-20-dots","loader-21-ripple","loader-22-spinner-ios","loader-23-spinner","loader-24-glow"];
+  var grid = document.getElementById('grid');
+  if (!window.lottie) { document.getElementById('cdn-warn').style.display = 'block'; }
+  files.forEach(function (f, i) {
+    var card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = '<div class="stage" id="s' + i + '"></div><div class="name">' + f.replace(/-/g, ' ') + '</div><div class="meta">lottie · json</div>';
+    grid.appendChild(card);
+    try {
+      if (window.lottie && typeof DATA !== 'undefined' && DATA[f]) {
+        lottie.loadAnimation({ container: document.getElementById('s' + i), renderer: 'svg', loop: true, autoplay: true, animationData: DATA[f] });
+      }
+    } catch (e) { /* leave placeholder */ }
+  });
+</script>
+</body>
+</html>

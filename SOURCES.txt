@@ -1,0 +1,25 @@
+# NEXORA Loaders Pack — 24 Lottie Loaders للمواقع
+## خفيفة وسريعة: إجمالي الحزمة ~200KB فقط
+
+الملفات: files/loader-01 … loader-24.json + preview.html (معاينة حية)
+
+الخريطة المرجعية (ترسانة NEXORA):
+loader-01-material ← X-FX-0438 · loader-02-disc ← X-FX-0434
+loader-03-simple ← X-FX-0441 · loader-04-dots-3 ← X-FX-0477
+loader-05-dots-2 ← X-FX-0476 · loader-06-sleepy ← X-FX-0266
+loader-07-spinner-ring ← X-FX-0770 · loader-08-trail ← X-FX-0446
+loader-09-progress-2 ← X-FX-0239 · loader-10-wave-a ← X-FX-0501
+loader-11-material-2 ← X-FX-0436 · loader-12-material-wave ← X-FX-0437
+loader-13-material-google ← X-FX-0232 · loader-14-dots-google ← X-FX-0768
+loader-15-dots-1 ← X-FX-0475 · loader-16-progress-1 ← X-FX-0240
+loader-17-gradient-strokes ← X-FX-0478 · loader-18-semicircle ← X-FX-0440
+loader-19-preloader ← X-FX-0439 · loader-20-dots ← X-FX-0435
+loader-21-ripple ← X-FX-0614 · loader-22-spinner-ios ← X-FX-0769
+loader-23-spinner ← X-FX-0444 · loader-24-glow ← X-FX-0257
+
+⚠️ تنبيه الترخيص: ملفات lottie-library أمثلة lottiefiles، وmega-samples من repos الـSDK
+(Apache/MIT غالبًا) — راجع ترخيص المصدر الأصلي قبل البيع التجاري، أو بِع
+برخصة استخدام شخصي أولًا. كل ملف متحقق منه (JSON+Lottie صالح، بلا تكرار محتوى).
+
+السعر المقترح: 9–15$ — حزمة خفيفة بمعاينة حية تبيع نفسها.
+الاستخدام: سطر واحد lottie-web — مثال داخل preview.html.
